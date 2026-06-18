@@ -19,7 +19,7 @@ Sigue estos pasos para levantar el entorno de desarrollo localmente:
 
 ### 1. Clonar el repositorio
 ```bash
-git clone [https://github.com](https://github.com/Anthony-svg/FrontendShop.git)
+git clone https://github.com/Anthony-svg/FrontendShop.git
 cd TU_REPOSITORIO_FRONTEND
 ```
 
