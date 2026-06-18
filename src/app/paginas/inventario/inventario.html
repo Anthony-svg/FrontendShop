@@ -1,0 +1,71 @@
+<div class="row mx-3 ">
+<h2>Inventario</h2><hr>
+</div>
+<form >
+    <div class="row mx-3">
+  <div class="col">
+    <label for="IdProducto">Id Producto</label>
+    <input type="text" class="form-control" placeholder="Id Producto" aria-label="First name">
+  </div>
+  <div class="col">
+    <label for="NombreProducto">Nombre Producto</label>
+    <input type="text" class="form-control" placeholder="Nombre Producto" aria-label="Last name">
+  </div>
+  <div class="col">
+    <label for="StockDisponible">Stock Disponible</label>
+    <input type="text" class="form-control" placeholder="Stock Disponible" aria-label="Last name">
+  </div>
+  <div class="col">
+    <label for="ReordenarStock">Reponer Stock</label>
+    <input type="text" class="form-control" placeholder="Reponer Stock" aria-label="Last name">
+  </div>
+</div>
+</form>
+<div class="mx-5 mt-3">
+    <div class="col-lg-3">
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+</div>
+<div class="div mt-5 mx-3">
+  <h3>Detalles de Inventario</h3>
+</div>
+<div class="row mx-3">
+<table class="table table-bordered border-dark mt-2">
+  <thead>
+    <tr>
+      <th scope="col">Id del Producto</th>
+      <th scope="col">Nombre del Producto</th>
+      <th scope="col">Stock Disponible</th>
+      <th scope="col">Reordenar Stock</th>
+      <th scope="col">Editar</th>
+      <th scope="col">Borrar</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Mobile</td>
+      <td>50</td>
+      <td>60</td>
+      <td>
+        <button type="button" class="btn btn-primary">Editar</button>
+      </td>
+      <td>
+        <button type="button" class="btn btn-danger">Borrar</button>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Laptop</td>
+      <td>30</td>
+      <td>100</td>
+      <td>
+        <button type="button" class="btn btn-primary">Editar</button>
+      </td>
+      <td>
+        <button type="button" class="btn btn-danger">Borrar</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</div>
