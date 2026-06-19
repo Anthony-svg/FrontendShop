@@ -1,7 +1,9 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, inject } from '@angular/core';
-import { environment } from '../../../environments/environment.development';
 import { ReactiveFormsModule, FormBuilder } from '@angular/forms';
+import { InventarioService } from '../../inventario-service';
+import { InventarioModel } from '../../models/inventario.model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-inventario',
@@ -11,7 +13,8 @@ import { ReactiveFormsModule, FormBuilder } from '@angular/forms';
 })
 export class Inventario {
   private readonly formBuilder = inject(FormBuilder);
-  httpClient=inject(HttpClient)
+  inventario=inject(InventarioService)
+  router= inject(Router)
 
   form = this.formBuilder.group({
     productoId:"",
@@ -21,8 +24,15 @@ export class Inventario {
   }
   )
 
+  obtenerInventario(){
+
+  }
+  
   guardarInventario(){
-   console.log(this.form.value)
+    let inventario = this.form.value as InventarioModel
+    this.inventario.crear(inventario).subscribe(()=>{
+      this.router.navigate(["inventario"])
+    }) 
   }
 
 }
