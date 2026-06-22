@@ -7,8 +7,8 @@ import { InventarioModel } from './models/inventario.model';
   providedIn: 'root',
 })
 export class InventarioService {
-    private http =inject(HttpClient);
-  private urlBase = environment.apiURL+"api/inventario";
+  private http =inject(HttpClient);
+  private urlBase = environment.apiURL+"/api/inventario";
 
   public crear (inventario:InventarioModel){
     return this.http.post(this.urlBase,inventario);

@@ -1,4 +1,3 @@
-import { HttpClient } from '@angular/common/http';
 import { Component, inject } from '@angular/core';
 import { ReactiveFormsModule, FormBuilder } from '@angular/forms';
 import { InventarioService } from '../../inventario-service';
@@ -17,10 +16,10 @@ export class Inventario {
   router= inject(Router)
 
   form = this.formBuilder.group({
-    productoId:"",
-    productoNombre:"",
-    stockDisponible:0,
-    reponerStock:0
+    ProductoId:0,
+    ProductoNombre:"",
+    StockDisponible:0,
+    ReponerStock:0
   }
   )
 
@@ -29,9 +28,11 @@ export class Inventario {
   }
   
   guardarInventario(){
-    let inventario = this.form.value as InventarioModel
-    this.inventario.crear(inventario).subscribe(()=>{
-      this.router.navigate(["inventario"])
+    console.log(this.form.value)
+    const datosinventario = this.form.value as InventarioModel
+    console.log(datosinventario)
+    this.inventario.crear(datosinventario).subscribe(()=>{
+      this.router.navigate(["/"])
     }) 
   }
 

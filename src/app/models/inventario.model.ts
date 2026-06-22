@@ -1,6 +1,6 @@
 export interface InventarioModel{
-    productoId:string,
-    productoNombre:string,
-    stockDisponible:number,
-    reponerStock:number
+    ProductoId:number,
+    ProductoNombre:string,
+    StockDisponible:number,
+    ReponerStock:number
 }

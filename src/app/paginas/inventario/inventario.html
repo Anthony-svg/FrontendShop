@@ -4,20 +4,16 @@
 <form (submit)="guardarInventario()" [formGroup]="form">
     <div class="row mx-3">
   <div class="col">
-    <label for="productoId">Id Producto</label>
-    <input [formControl]="form.controls.productoId" type="text" class="form-control" placeholder="Id Producto" aria-label="First name">
-  </div>
-  <div class="col">
     <label for="productoNombre">Nombre Producto</label>
-    <input [formControl]="form.controls.productoNombre" type="text" class="form-control" placeholder="Nombre Producto" aria-label="Last name">
+    <input [formControl]="form.controls.ProductoNombre" type="text" class="form-control" placeholder="Nombre Producto" aria-label="Last name">
   </div>
   <div class="col">
     <label for="stockDisponible">Stock Disponible</label>
-    <input [formControl]="form.controls.stockDisponible" type="number" class="form-control" placeholder="Stock Disponible" aria-label="Last name">
+    <input [formControl]="form.controls.StockDisponible" type="number" class="form-control" placeholder="Stock Disponible" aria-label="Last name">
   </div>
   <div class="col">
     <label for="reponerStock">Reponer Stock</label>
-    <input [formControl]="form.controls.reponerStock" type="number" class="form-control" placeholder="Reponer Stock" aria-label="Last name">
+    <input [formControl]="form.controls.ReponerStock" type="number" class="form-control" placeholder="Reponer Stock" aria-label="Last name">
   </div>
 </div>
 <div class="mx-5 mt-3">
