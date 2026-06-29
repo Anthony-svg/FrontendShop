@@ -20,12 +20,8 @@
     <div class="col-lg-3">
         <button type="submit" class="btn btn-primary">Guardar item</button>
     </div>
-    <div class="col-lg-3">
-        <button class="btn btn-danger">Cancelar</button>
-    </div>
 </div>
 </form>
-
 <div class="div mt-5 mx-3">
   <h3>Detalles de Inventario</h3>
 </div>
@@ -43,33 +39,45 @@
     </tr>
   </thead>
   <tbody>
-    <tr>
+    <!-- @if (inventarios){ -->
+      @for (inventario of inventarios(); track inventario.productoId){
+      <tr>
+      <th scope="row">{{inventario.productoId}}</th>
+      <td>{{inventario.productoNombre}}</td>
+      <td>{{inventario.stockDisponible}}</td>
+      <td>{{inventario.reponerStock}}</td>
+      <td>
+        <button type="button" class="btn btn-primary">Editar</button>
+      </td>
+      <td>
+        <button type="button" class="btn btn-danger">Borrar</button>
+      </td>
+    </tr>
+      }@empty {
+        <tr>
+          <td colspan="6">No hay productos en el inventario</td>
+        </tr>
+      }
+<!-- } -->
+  <!-- <tr>
       <th scope="row">1</th>
-      <td>Mobile</td>
-      <td>50</td>
-      <td>60</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
       <td>
         <button type="button" class="btn btn-primary">Editar</button>
       </td>
       <td>
         <button type="button" class="btn btn-danger">Borrar</button>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Laptop</td>
-      <td>30</td>
-      <td>100</td>
-      <td>
-        <button type="button" class="btn btn-primary">Editar</button>
-      </td>
-      <td>
-        <button type="button" class="btn btn-danger">Borrar</button>
-      </td>
-    </tr>
+    </tr> -->
+
   </tbody>
 </table>
 </div>
+
+
+
 
 
   
